@@ -1,5 +1,6 @@
 pluginManagement {
     repositories {
+        includeBuild("build-logic")
         google {
             content {
                 includeGroupByRegex("com\\.android.*")
@@ -12,8 +13,6 @@ pluginManagement {
     }
 }
 
-includeBuild("paparazzi-plugin")
-
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
@@ -24,11 +23,7 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "ComposablePreviewScanner"
-include(":tests")
 include(":core")
 include(":android")
 include(":jvm")
 include(":common")
-include(":custompreviews")
-include(":paparazzi-plugin-tests")
-include(":glance")
