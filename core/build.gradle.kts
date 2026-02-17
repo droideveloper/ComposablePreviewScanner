@@ -68,7 +68,7 @@ val shadowJarTask = tasks.named<ShadowJar>("shadowJar") {
         )
     }
     relocate("io.github.classgraph", "$projectGroupId.shadow.io.github.classgraph")
-    relocate("kotlin.reflect", "$projectGroupId.shadow.kotlin.reflect")
+    relocate("kotlin.reflect", "kotlin.reflect")
     archiveClassifier.set(null as String?)
 }
 
