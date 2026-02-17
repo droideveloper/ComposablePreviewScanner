@@ -19,11 +19,11 @@ gradlePlugin {
     plugins {
         register("LocalMavenPublish") {
             id = "sergio.sastre.composable.preview.scanner.local.publish"
-            implementationClass = "sergio.sastre.composable.preview.scanner.MavenLocalPublishingPlugin"
+            implementationClass = "sergio.sastre.composable.preview.scanner.ComposablePreviewPublishPlugin"
         }
     }
 }
 
-repositories {
-    mavenCentral()
+dependencies {
+    compileOnly(libs.shadow.plugin)
 }
